@@ -153,8 +153,13 @@ if st.session_state.page == "intro":
         )
 
     with hero_right:
-        image_path = os.path.join(ASSETS_DIR, "hero_finance.png")
+    image_path = os.path.join(ASSETS_DIR, "hero_finance.png")
+
+    if os.path.exists(image_path):
         st.image(image_path, use_container_width=True)
+    else:
+        st.warning("⚠ Hero image not found (assets/hero_finance.png)")
+
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -703,4 +708,5 @@ elif st.session_state.page == "whatif":
                 st.success(f"✅ {cat} is within weekly budget.")
 
     st.divider()
+
     st.button("⬅ Back to Dashboard", on_click=navigate, args=("dashboard",))
