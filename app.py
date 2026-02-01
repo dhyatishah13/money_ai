@@ -118,51 +118,51 @@ ASSETS_DIR = "assets"  # make sure your folder is named "assets"
 if st.session_state.page == "intro":
     
     # ================= HERO SECTION =================
-    hero_left, hero_right = st.columns([1.2, 1])
+#    hero_left, hero_right = st.columns([1.2, 1])
 
-    with hero_left:
-        st.markdown(f"""
-        <div style="
-            padding:60px 40px;
-            border-radius:30px;
-            background: linear-gradient(145deg, #dbe9ff, #f9fbff);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            text-align:left;
-        ">
-            <h1 style="font-size:56px; font-weight:900; margin-bottom:20px; color:#0B3D91;">
-                💸 MoneyLeak AI
-            </h1>
-            <p style="font-size:22px; color:#333; font-weight:500; margin-bottom:20px;">
-                AI that understands how you spend — not just where
-            </p>
-            <p style="font-size:18px; color:#555; margin-bottom:25px;">
-                Traditional budget apps track numbers.<br>
-                <b>MoneyLeak AI</b> analyzes financial behavior, predicts overspending, 
-                and guides smarter decisions using AI & ML.
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+#     with hero_left:
+#         st.markdown(f"""
+#         <div style="
+#             padding:60px 40px;
+#             border-radius:30px;
+#             background: linear-gradient(145deg, #dbe9ff, #f9fbff);
+#             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+#             text-align:left;
+#         ">
+#             <h1 style="font-size:56px; font-weight:900; margin-bottom:20px; color:#0B3D91;">
+#                 💸 MoneyLeak AI
+#             </h1>
+#             <p style="font-size:22px; color:#333; font-weight:500; margin-bottom:20px;">
+#                 AI that understands how you spend — not just where
+#             </p>
+#             <p style="font-size:18px; color:#555; margin-bottom:25px;">
+#                 Traditional budget apps track numbers.<br>
+#                 <b>MoneyLeak AI</b> analyzes financial behavior, predicts overspending, 
+#                 and guides smarter decisions using AI & ML.
+#             </p>
+#         </div>
+#         """, unsafe_allow_html=True)
 
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.button(
-            "🚀 Start Smart Budgeting",
-            on_click=navigate,
-            args=("login",),
-            key="hero_start_btn",
-            help="Click to login or register and start tracking your finances!"
-        )
+#         st.markdown("<br>", unsafe_allow_html=True)
+#         st.button(
+#             "🚀 Start Smart Budgeting",
+#             on_click=navigate,
+#             args=("login",),
+#             key="hero_start_btn",
+#             help="Click to login or register and start tracking your finances!"
+#         )
 
-with hero_right:
-    image_path = os.path.join(ASSETS_DIR, "hero_finance.png")
+# with hero_right:
+#     image_path = os.path.join(ASSETS_DIR, "hero_finance.png")
 
-    if os.path.exists(image_path):
-        st.image(image_path, use_container_width=True)
-    else:
-        st.warning("⚠ Hero image not found (assets/hero_finance.png)")
+#     if os.path.exists(image_path):
+#         st.image(image_path, use_container_width=True)
+#     else:
+#         st.warning("⚠ Hero image not found (assets/hero_finance.png)")
 
 
 
-    st.markdown("<br><br>", unsafe_allow_html=True)
+#     st.markdown("<br><br>", unsafe_allow_html=True)
 
     # ================= FEATURES GRID =================
     st.markdown("## ✨ What Makes MoneyLeak AI Different")
@@ -711,4 +711,5 @@ elif st.session_state.page == "whatif":
     st.divider()
 
     st.button("⬅ Back to Dashboard", on_click=navigate, args=("dashboard",))
+
 
