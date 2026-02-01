@@ -152,13 +152,14 @@ if st.session_state.page == "intro":
             help="Click to login or register and start tracking your finances!"
         )
 
-    with hero_right:
+with hero_right:
     image_path = os.path.join(ASSETS_DIR, "hero_finance.png")
 
     if os.path.exists(image_path):
         st.image(image_path, use_container_width=True)
     else:
         st.warning("⚠ Hero image not found (assets/hero_finance.png)")
+
 
 
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -710,3 +711,4 @@ elif st.session_state.page == "whatif":
     st.divider()
 
     st.button("⬅ Back to Dashboard", on_click=navigate, args=("dashboard",))
+
